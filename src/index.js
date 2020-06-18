@@ -8,6 +8,7 @@ import { searchRobots, requestRobots } from './reducers'
 import './index.css';
 import App from './containers/App';
 import 'tachyons';
+import * as serviceWorker from './serviceWorker';
 
 const logger = createLogger();
 const rootReducer = combineReducers({searchRobots, requestRobots})
@@ -17,3 +18,5 @@ ReactDOM.render(
     <Provider store={store}>
         <App />
     </Provider>, document.getElementById('root'));
+
+serviceWorker.register();

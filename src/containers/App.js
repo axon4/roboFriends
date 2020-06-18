@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
+import CountButton from '../components/CountButton';
 import SearchBox from '../components/SearchBox';
 import ErrorBoundary from '../components/ErrorBoundary';
 import CardList from '../components/CardList';
@@ -42,6 +43,7 @@ class App extends Component {
         (
             <div className='tc'>
                 <Header />
+                <CountButton />
                 <SearchBox searchChange={onSearchChange}/>
                 <Scroll>
                     <ErrorBoundary>
