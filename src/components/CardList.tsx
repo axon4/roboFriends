@@ -1,9 +1,8 @@
 import React from 'react';
 import Card from './Card';
+import { IRobot } from '../containers/App';
 
-const CardList = ({ robots }) => {
-    // Test if error boundary works
-    // if (true) {throw new Error('Skene')};
+const CardList = ({ robots }:{robots:Array<IRobot>}) => {
     return (
         <div>
             {
